@@ -10,9 +10,11 @@ const CharacterPart = (props) => {
   };
 
   const onUpload = async (e) => {
-    // setLoading(true);
+    setLoading(true);
     try {
       const image = e.target.files[0];
+      buttonRef.current.value = "";
+
       if (image) {
         console.log(image);
         const form = new FormData();
@@ -21,17 +23,16 @@ const CharacterPart = (props) => {
         if (resp) {
           console.log(resp.data);
           props.update(resp.data);
-          buttonRef.current.value = "";
         }
       } else throw new Error();
     } catch (error) {
       console.log("error occured");
     }
-    // setLoading(false);
+    setLoading(false);
   };
   return (
     <>
-      {!props.state && <div className={`${cl.total} ${cl.template} ${cl[props.cl]}`} onClick={upload}></div>}
+      {!loading && !props.state && <div className={`${cl.total} ${cl.template} ${cl[props.cl]}`} onClick={upload}></div>}
       <input type="file" ref={buttonRef} name="avatar" style={{ display: "none" }} accept="image/png, image/jpeg" onChange={(e) => onUpload(e)} />
       {props.state && !loading && (
         <img src={`data:image/png;base64,${props.state}`} alt="" className={`${cl[props.cl]} ${cl.image}`} onClick={upload} />
