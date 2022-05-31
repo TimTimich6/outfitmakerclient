@@ -32,7 +32,11 @@ const CharacterPart = (props) => {
   };
   return (
     <>
-      {!loading && !props.state && <div className={`${cl.total} ${cl.template} ${cl[props.cl]}`} onClick={upload}></div>}
+      {!loading && !props.state && (
+        <div className={`${cl.total} ${cl.template} ${cl[props.cl]}`} onClick={upload}>
+          <h1>{props.cl}</h1>
+        </div>
+      )}
       <input type="file" ref={buttonRef} name="avatar" style={{ display: "none" }} accept="image/png, image/jpeg" onChange={(e) => onUpload(e)} />
       {props.state && !loading && (
         <img src={`data:image/png;base64,${props.state}`} alt="" className={`${cl[props.cl]} ${cl.image}`} onClick={upload} />

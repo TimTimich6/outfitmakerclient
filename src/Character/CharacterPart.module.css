@@ -36,6 +36,14 @@
   cursor: pointer;
   transition: all 0.2s ease-out;
   border-radius: 0.7rem;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.total > h1 {
+  font-weight: 100;
+  font-size: 1.4rem;
 }
 .total:hover {
   transform: scale(1.05, 1.05) skew(1deg, -1deg);
