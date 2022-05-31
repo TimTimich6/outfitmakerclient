@@ -1,7 +1,7 @@
 .head {
-  height: 6rem;
+  height: 5rem;
   /* width: 6rem; */
-  transform: scale(1.1, 1.1) translateY(0.5rem);
+  transform: scale(1, 1) translateY(0.5rem);
   z-index: 12;
 }
 
@@ -40,10 +40,12 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  box-shadow: 0px 2px 5px 3px black;
 }
 .total > h1 {
   font-weight: 100;
   font-size: 1.4rem;
+  color: rgb(239, 234, 227);
 }
 .total:hover {
   transform: scale(1.05, 1.05) skew(1deg, -1deg);
