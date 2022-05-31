@@ -16,7 +16,7 @@ const Assembly = (props) => {
   };
   return (
     <div className={cl.total}>
-      <RoundButton style={{ fontSize: "1.5rem", backgroundColor: "gray", color: "white", marginBottom: "2rem" }} onClick={resetClothes}>
+      <RoundButton style={{ fontSize: "1.5rem", backgroundColor: "gray", color: "white", marginBottom: "0.5rem" }} onClick={resetClothes}>
         Reset Clothes
       </RoundButton>
       <CharacterPart cl="head" state={head} update={setHead} />
