@@ -40,7 +40,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 2px 5px 3px black;
+  box-shadow: 0px 2px 5px 1px black;
 }
 .total > h1 {
   font-weight: 100;
